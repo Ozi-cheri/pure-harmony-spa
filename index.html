@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pure Harmony Spa</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => section.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+
+    window.onload = () => showSection('home');
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Pure Harmony Spa</h1>
+    <nav>
+      <ul>
+        <li><button onclick="showSection('home')">Home</button></li>
+        <li><button onclick="showSection('about')">About</button></li>
+        <li><button onclick="showSection('services')">Prices</button></li>
+        <li><button onclick="showSection('gallery')">Gallery</button></li>
+        <li><button onclick="showSection('contact')">Contact</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h2>Welcome to Pure Harmony Spa</h2>
+      <p>Experience relaxation like never before. Let your mind, body, and soul rejuvenate.</p>
+    </section>
+
+    <section id="about" style="display: none;">
+      <div class="about-container">
+        <div class="about-block">
+          <img src="images/spa1.jpg" alt="Spa Image 1">
+          <p>Our spa treatments are designed to restore balance and tranquility. Each session is a personalized journey of peace and renewal.</p>
+        </div>
+        <div class="about-block">
+          <img src="images/spa2.jpg" alt="Spa Image 2">
+          <p>Pure Harmony Spa offers a serene environment with skilled therapists committed to your wellbeing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" style="display: none;">
+      <h2>Our Prices</h2>
+      <ul class="price-list">
+        <li>Swedish Massage - $60</li>
+        <li>Hot Stone Massage - $75</li>
+        <li>Aromatherapy - $65</li>
+        <li>Facial Treatment - $50</li>
+      </ul>
+    </section>
+
+    <section id="gallery" style="display: none;">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="images/gallery1.jpg" alt="Massage">
+        <img src="images/gallery2.jpg" alt="Facial">
+        <img src="images/gallery3.jpg" alt="Relaxation">
+        <img src="images/gallery4.jpg" alt="Spa Room">
+      </div>
+    </section>
+
+    <section id="contact" style="display: none;">
+      <h2>Contact Us</h2>
+      <p>Email: info@pureharmonyspa.com</p>
+      <p>Phone: +49 123 456 789</p>
+      <p>Location: Berlin, Germany</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Follow us:</p>
+    <div class="social-icons">
+      <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+    </div>
+    <p>&copy; 2025 Pure Harmony Spa</p>
+  </footer>
+</body>
+</html>

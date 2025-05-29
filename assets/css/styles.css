@@ -79,6 +79,10 @@ body {
   max-width: 700px;
   margin: 0 auto 2rem auto;
 }
+.welcome {
+  padding: 3rem 2rem;
+  text-align: center;
+}
 
 .hero-img {
   width: 90%;
@@ -87,6 +91,22 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+.hero-message {
+  padding: 1.5rem 2rem;
+  text-align: center;
+  
+}
+
+.hero-message p {
+  color: #fff;
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
 
 
 
@@ -357,7 +377,7 @@ body {
   text-align: center;
   padding: 5rem 2rem;
   background: linear-gradient(to right, #c33fef, #eab9ec);
-  color: #fff;
+  
 }
 
 .thank-you-section h1 {

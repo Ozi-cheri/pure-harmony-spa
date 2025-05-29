@@ -8,8 +8,8 @@
 /* Body Styling */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
+  background: linear-gradient(to right, #c33fef, #eab9ec);
+  color: #fff;
   line-height: 1.6;
 }
 
@@ -88,6 +88,8 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+
+
 /* Footer */
 .footer {
   text-align: center;
@@ -112,107 +114,59 @@ body {
   color: #52796f;
 }
 
+.footer p {
+  color: #333; /* white text */
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+
+.about-page {
+  
+  padding: 3rem 2rem;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.about-page h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #fff;
+  font-weight: 600;
+}
 
 .about-section {
-  display: grid;
-  grid-template-areas:
-    "heading heading"
-    "left ."
-    ". right";
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 2rem;
-  padding: 3rem 2rem;
-  background-color: #fefefe;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
 }
 
-.about-message {
-  grid-area: heading;
-  text-align: center;
-  padding: 1rem 2rem;
+.about-section.reverse {
+  flex-direction: row-reverse;
 }
 
-.about-message h2 {
-  font-size: 2.5rem;
-  color: #52796f;
-  margin: 0;
+.about-text {
+  flex: 1;
+  max-width: 500px;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
-.about-image-block {
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.about-image-block.left {
-  grid-area: left;
-  align-self: start;
-}
-
-.about-image-block.right {
-  grid-area: right;
-  align-self: end;
-  justify-self: end;
+.about-image {
+  flex: 1;
+  max-width: 500px;
 }
 
 .about-image img {
   width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.about-image-block p {
-  margin-top: 1rem;
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Responsive Layout */
-@media (max-width: 768px) {
-  .about-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about-image-block.left,
-  .about-image-block.right {
-    width: 100%;
-    max-width: 500px;
-  }
-
-  .about-message {
-    padding-bottom: 1rem;
-  }
-}
-
-
-.opening-hours {
-  margin-top: 1.5rem;
-  padding: 1rem;
-  background-color: #e6f0ed;
-  border-left: 4px solid #52796f;
-  border-radius: 8px;
-  color: #333;
-}
-
-.opening-hours h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-  color: #52796f;
-}
-
-.opening-hours ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.opening-hours li {
-  margin-bottom: 0.3rem;
-  font-size: 1rem;
-}
 
 /* Pricing Section */
 .pricing-section {
@@ -257,6 +211,31 @@ body {
   color: #555;
 }
 
+.pricing-item h3 small {
+  font-size: 0.9rem;
+  color: #777;
+  font-weight: normal;
+}
+
+.opening-hours-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.opening-hours {
+  background-color: #52796f;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
 /* Gallery Section */
 .gallery-section {
   padding: 3rem 2rem;
@@ -297,7 +276,7 @@ body {
 
 .contact-section h2 {
   font-size: 2rem;
-  color: #52796f;
+  color: #fff;
   margin-bottom: 1rem;
 }
 
@@ -338,6 +317,72 @@ body {
 
 .contact-form button:hover {
   background-color: #354f52;
+}
+
+.contact-address-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.contact-address {
+  background-color: #52796f; /* soothing spa color */
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-address h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.contact-address p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0.3rem 0;
+  color: #fff
+}
+
+
+
+/* Thank You Page Styles */
+.thank-you-section {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: linear-gradient(to right, #c33fef, #eab9ec);
+  color: #fff;
+}
+
+.thank-you-section h1 {
+  font-size: 2.5rem;
+  color: #52796f;
+  margin-bottom: 1rem;
+}
+
+.thank-you-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.thank-you-section .button {
+  background-color: #52796f;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.thank-you-section .button:hover {
+  background-color: #395d50;
 }
 
 
